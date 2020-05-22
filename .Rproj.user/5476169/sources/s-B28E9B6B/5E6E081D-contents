@@ -1,0 +1,11 @@
+library(datasets)
+data(faithful)
+plot(faithful, main = "Old Faithful Eruptions",
+     xlab = "Eruption Length (min",
+     ylab = "Wait time (min) ", pch=20, col="red")
+hist(faithful$waiting)
+hist(faithful$waiting, plot=FALSE)$breaks
+hist(faithful$waiting, plot=FALSE)$counts
+hist(faithful$waiting, main = "Histogram", breaks = seq(from = 40, to = 100, by=1))
+qqnorm(faithful$waiting, pch=16, cex=0.5, main = "Q-Q plot for Waiting Time")
+qqline(faithful$waiting)
